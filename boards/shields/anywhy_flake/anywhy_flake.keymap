@@ -108,13 +108,12 @@
 
         base {
                 bindings = <
-// L Col 0   L Col 1    L Col 2    L Col 3    L Col 4    L Col 5 (Outer)      R Col 5 (Outer) R Col 4    R Col 3    R Col 2    R Col 1    R Col 0
-&kp ESC      &kp B      &kp L      &kp D      &kp C      &kp V                &kp J           &kp Y      &kp O      &kp U      &kp SEMI   &kp DEL      // Add ESC/DEL outer?
-&kp TAB      &kp N      &kp R      &kp T      &kp S      &kp G                &kp P           &kp H      &kp A      &kp E      &kp I      &kp QUOT     // Add TAB/QUOT outer?
-&kp LSHFT    &kp X      &kp Q      &kp M      &kp W      &kp Z                &kp K           &kp F      &kp COMMA   &kp DOT   &kp APOS   &kp RSHFT    // Add Shifts outer?
+&kp ESC    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5            &kp N6  &kp N7     &kp N8     &kp N9    &kp N0     &kp MINUS
+&kp ENTER      &kp B      &kp L      &kp D      &kp C      &kp V                &kp J           &kp Y      &kp O      &kp U      &kp SEMI   &kp BSPS      // Add ESC/DEL outer?
+&kp TAB      &kp N      &kp R      &kp T      &kp S      &kp G                &kp P           &kp H      &kp A      &kp E      &kp I      &kp DEL    // Add TAB/QUOT outer?
+&kp LBKT    &kp X      &kp Q      &kp M      &kp W      &kp Z                &kp K           &kp F      &kp COMMA   &kp DOT   &kp APOS   &kp RBKT    // Add Shifts outer?
 
-//                                LThumb3     LThumb2        LThumb1           RThumb1         RThumb2       RThumb3
-                                  &kp LGUI    <_lower_bspc &kp LALT          &kp RALT        <_raise_spc &kp RCTL // Example thumbs
+                     &kp LGUI  &kp LALT  &kp LCTRL  &kp SPACE  &mo 1  &mo 2   &kp LSHFT  &kp LGUI   &kp LALT  &kp LCTRL
             >; 
 };
 
