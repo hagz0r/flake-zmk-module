@@ -107,21 +107,23 @@
         compatible = "zmk,keymap";
 
         base {
-            bindings = <
-&kp ESC    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5            &kp N6  &kp N7     &kp N8     &kp N9    &kp N0     &kp MINUS
-&kp ENTER  &kp Q   &kp W     &kp E     &kp R      &kp T             &kp Y   &kp U      &kp I      &kp O     &kp P      &kp BSPC
-&kp TAB    &kp A   &kp S     &kp D     &kp F      &kp G             &kp H   &kp J      &kp K      &kp L     &kp SEMI   &kp APOS
-&kp LBKT   &kp Z   &kp X     &kp C     &kp V      &kp B             &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RBKT
-                   &kp LGUI  &kp LALT  &kp LCTRL  &kp SPACE  &mo 1  &mo 2   &kp LSHFT  &kp LGUI   &kp LALT  &kp LCTRL
-            >;
-        };
+                bindings = <
+// L Col 0   L Col 1    L Col 2    L Col 3    L Col 4    L Col 5 (Outer)      R Col 5 (Outer) R Col 4    R Col 3    R Col 2    R Col 1    R Col 0
+&kp ESC      &kp B      &kp L      &kp D      &kp C      &kp V                &kp J           &kp Y      &kp O      &kp U      &kp SEMI   &kp DEL      // Add ESC/DEL outer?
+&kp TAB      &kp N      &kp R      &kp T      &kp S      &kp G                &kp P           &kp H      &kp A      &kp E      &kp I      &kp QUOT     // Add TAB/QUOT outer?
+&kp LSHFT    &kp X      &kp Q      &kp M      &kp W      &kp Z                &kp K           &kp F      &kp COMMA   &kp DOT   &kp APOS   &kp RSHFT    // Add Shifts outer?
+
+//                                LThumb3     LThumb2        LThumb1           RThumb1         RThumb2       RThumb3
+                                  &kp LGUI    <_lower_bspc &kp LALT          &kp RALT        <_raise_spc &kp RCTL // Example thumbs
+            >; 
+};
 
         num {
             bindings = <
 &none  &none     &none          &none      &none      &none            &none      &none   &none   &none   &none      &none
 &none  &kp ESC   &kp BACKSPACE  &kp TAB    &kp ENTER  &kp DEL          &kp GRAVE  &kp N7  &kp N8  &kp N9  &kp MINUS  &none
 &none  &kp LGUI  &kp LALT       &kp LCTRL  &kp LSHFT  &kp LBKT         &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp N0     &none
-&none  &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &kp RBKT         &kp SQT    &kp N1  &kp N2  &kp N3  &kp BSLH   &none
+&none  &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &kp RBKT         &kp BSLH    &kp N1  &kp N2  &kp N3  &kp FSLH   &none
                  &trans         &trans     &trans     &trans    &none  &none      &trans  &trans  &trans  &trans
             >;
         };
